@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goodbye from Devarsh</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .login-container, .message-container {
+      border: 2px solid #ff7e5f;
+      padding: 2rem;
+      background: #ffffffcc;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      background: #fff5f0;
+      border: 1px solid #ffa07a;
+      border-radius: 8px;
+      color: #333;
+    }
+    button {
+      padding: 0.7rem 1.5rem;
+      background: #ff7e5f;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #eb5e39;
+    }
+    .hidden {
+      display: none;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container" id="loginBox">
+    <h2>Thanks Giving Message from Devarsh</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkLogin()">Access Memory</button>
+    <p id="errorMsg" style="color:red;"></p>
+  </div>
+
+  <div class="message-container hidden" id="messageBox">
+    <h2>Hey <span id="nameDisplay"></span> 👋</h2>
+    <p id="customMessage">(Your custom message here...)</p>
+    <video id="customVideo" class="hidden" controls></video>
+  </div>
+
+  <script>
+    const users = {
+      "Krishna": {
+        password: "Nigga",
+        name: "Krishna",
+        message: "Hey Buddy, Thanks for everything for making my Years of this college memorable. I was never intended to make friends tbh and I never want to cause I know I'm gonna leave everything behind, i am really gonna miss the things that we do, whether it was stupidious shittiest thing or any problem that would came, you stand by me and I really appreciate and thankful to you. maybe I ran out of words maybe I miss some things here, whether I do some mistakes or I hurt you even I am not willing to Sorry for everything and Thank you for everything for trusting me to share your everything. Thank you. Wanna use N word but it's okay for this.",
+    
+      },
+      "Rudra": {
+        password: "Parul",
+        name: "Rudra",
+        message: "Hey Buddy, Thanks for everything for making my Years of this college memorable. I was never intended to make friends tbh and I never want to cause I know I'm gonna leave everything behind, i am really gonna miss the things that we do, whether it was stupidious shittiest thing or any problem that would came, you stand by me and I really appreciate and thankful to you. maybe I ran out of words maybe I miss some things here, whether I do some mistakes or I hurt you even I am not willing to Sorry for everything and Thank you for pens through which I wrote my exams, all stock market tips. Thank you for everything.",
+       
+      },
+      "Vraj": {
+        password: "Patel",
+        name: "Vraj",
+        message: "Hey Buddy, Thanks for everything for making my Years of this college memorable. I was never intended to make friends tbh and I never want to cause I know I'm gonna leave everything behind, i am really gonna miss the things that we do, whether it was stupidious shittiest thing or any problem that would came, you stand by me and I really appreciate and thankful to you. maybe I ran out of words maybe I miss some things here, whether I do some mistakes or I hurt you even I am not willing to Sorry for everything and Thank you for everything.",
+       
+      },
+      "Divyang": {
+        password: "Intestine",
+        name: "Divyang",
+        message: "Hey Buddy, Thanks for everything for making my Years of this college memorable. I was never intended to make friends tbh and I never want to cause I know I'm gonna leave everything behind, i am really gonna miss the things that we do, whether it was stupidious shittiest thing or any problem that would came, you stand by me and I really appreciate and thankful to you. maybe I ran out of words maybe I miss some things here, whether I do some mistakes or I hurt you even I am not willing to Sorry for everything and Thank you for everything.",
+        video: ""
+      },
+      "Parth": {
+        password: "chinni",
+        name: "Parth",
+        message: "Hey Buddy, Thanks for everything for making my Years of this college memorable. I was never intended to make friends tbh and I never want to cause I know I'm gonna leave everything behind, i am really gonna miss the things that we do, whether it was stupidious shittiest thing or any problem that would came, you stand by me and I really appreciate and thankful to you. maybe I ran out of words maybe I miss some things here, whether I do some mistakes or I hurt you even I am not willing to Sorry, specially I would take the blame for your not major but kinda ruining some good moments by hooking up with SH***ti. Thanks for everything all pickups and xerox you did thank you.",
+        video: ""
+      },
+      "Vidhi": {
+        password: "CookiesNCream",
+        name: "Vidhi",
+        message: "Hiieee, To you specially I wanna give this in a writing but, unfortunately yk time constraints, btw Thank you for everything for making every moments memorable of this 4 years. I started from starting I saw you and I never wanted to be friend or whatsoever with you, cause there were a lot of shit along with you I never wanted to be part of rather it was kunal, Jaiswal or Kunj, but destiny has different plans we all grouped together and I tbh thought that you could get me insight on GRESHA there was point we started sharing things you tell me yours I told you mine and never wanna anything you ended up being friends, sharing similarities to endless timed calls it make our bond stronger which made us best friends. I never had Girl as a friend also before you and i never intended to make any but dk it was distinct with you. Ofc I thanked you I met you friends and the stuff a lot stuff happened and I really forget all those moments. Yk I never meant to hurt anyone but in case I do I really hurt you and all I can say is Sorry, and still no ones know me like you and it's fact.And I never do anything for a reason and I do have one tbh, well this was what an abrupt end, i never wanted but in your case it happened, I don't how it works for you but you always gonna be my best friend cause i stick to that what so ever happen, Though Pleasure that you are part of my life I never forget. tbh I am not guilty for what I have done but i am sorry for the heart or you may cry. I do shit thing but it never affect anyone tbh and I never wanted anything worse for you too. I don't how you process that but that is what it is. Last two words Sorry .... Thank You .....",
+        video: ""
+      },
+      
+    };
+
+    function checkLogin() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const loginBox = document.getElementById("loginBox");
+      const msgBox = document.getElementById("messageBox");
+      const errorMsg = document.getElementById("errorMsg");
+
+      if(users[user] && users[user].password === pass){
+        loginBox.classList.add("hidden");
+        msgBox.classList.remove("hidden");
+        document.getElementById("nameDisplay").innerText = users[user].name;
+        document.getElementById("customMessage").innerText = users[user].message;
+
+        if(users[user].video){
+          const vid = document.getElementById("customVideo");
+          vid.src = users[user].video;
+          vid.classList.remove("hidden");
+        }
+
+        setTimeout(() => {
+          msgBox.classList.add("hidden");
+          loginBox.classList.remove("hidden");
+          document.getElementById("username").value = "";
+          document.getElementById("password").value = "";
+          document.getElementById("errorMsg").innerText = "Message access expired. Contact Devarsh to reopen.";
+        }, 15000);
+
+      } else {
+        errorMsg.innerText = "Invalid credentials. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
